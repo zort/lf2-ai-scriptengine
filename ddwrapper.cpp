@@ -73,6 +73,9 @@ class Info {
 		int x;
 		int y;
 		int z;
+		double x_real;
+		double y_real;
+		double z_real;
 		char facing;
 		char holding_up;
 		char holding_down;
@@ -152,6 +155,9 @@ class Info {
 			x = game->objects[object_num]->x;
 			y = game->objects[object_num]->y;
 			z = game->objects[object_num]->z;
+			x_real = game->objects[object_num]->x_real;
+			y_real = game->objects[object_num]->y_real;
+			z_real = game->objects[object_num]->z_real;
 			facing = game->objects[object_num]->facing;
 			holding_up = game->objects[object_num]->holding_up;
 			holding_down = game->objects[object_num]->holding_down;
@@ -959,6 +965,9 @@ void RegisterScriptFunctions(){
 	ScriptEngine->RegisterObjectProperty("Info","const int x",asOFFSET(Info,x));
 	ScriptEngine->RegisterObjectProperty("Info","const int y",asOFFSET(Info,y));
 	ScriptEngine->RegisterObjectProperty("Info","const int z",asOFFSET(Info,z));
+	ScriptEngine->RegisterObjectProperty("Info","const int x_real",asOFFSET(Info,x_real));
+	ScriptEngine->RegisterObjectProperty("Info","const int y_real",asOFFSET(Info,y_real));
+	ScriptEngine->RegisterObjectProperty("Info","const int z_real",asOFFSET(Info,z_real));
 	ScriptEngine->RegisterObjectProperty("Info","const bool facing",asOFFSET(Info,facing));
 	ScriptEngine->RegisterObjectProperty("Info","const bool holding_up",asOFFSET(Info,holding_up));
 	ScriptEngine->RegisterObjectProperty("Info","const bool holding_down",asOFFSET(Info,holding_down));
