@@ -275,7 +275,7 @@ typedef struct {
     int total_attack;
     int hp_lost;
     int mp_usage;
-    int unkwn15;
+    int unkwn15; // "owner" according to xsoameix
     int kills;
     int weapon_picks;
     int enemy;
