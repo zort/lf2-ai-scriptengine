@@ -56,6 +56,7 @@ HINSTANCE           gl_hThisInstance;
 
 int mode;
 int difficulty;
+int elapsed_time;
 int background = -1;
 int bg_width;
 int bg_zwidth1;
@@ -658,6 +659,7 @@ std::string getModuleName(const std::string &file){
 #endif
 
 int callEgo(int object_num,int target_num,asIScriptFunction *Function){
+	elapsed_time = *(int *)0x450b8c;
 	difficulty = *(int *)0x450c30;
 	mode = *(int *)0x451160;
 	if(background != *(int *)0x44d024){
@@ -711,6 +713,7 @@ int callEgo(int object_num,int target_num,asIScriptFunction *Function){
 }
 
 void callId(int object_num,asIScriptFunction *Function){
+	elapsed_time = *(int *)0x450b8c;
 	difficulty = *(int *)0x450c30;
 	mode = *(int *)0x451160;
 	if(background != *(int *)0x44d024){
@@ -931,6 +934,7 @@ void RegisterScriptFunctions(){
 
 	ScriptEngine->RegisterGlobalProperty("const int mode",&mode);
 	ScriptEngine->RegisterGlobalProperty("const int difficulty",&difficulty);
+	ScriptEngine->RegisterGlobalProperty("const int elapsed_time",&elapsed_time);
 	ScriptEngine->RegisterGlobalProperty("const int background",&background);
 	ScriptEngine->RegisterGlobalProperty("const int bg_width",&bg_width);
 	ScriptEngine->RegisterGlobalProperty("const int bg_zwidth1",&bg_zwidth1);
