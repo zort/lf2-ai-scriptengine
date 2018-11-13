@@ -969,9 +969,9 @@ void RegisterScriptFunctions(){
 	ScriptEngine->RegisterObjectProperty("Info","const int x",asOFFSET(Info,x));
 	ScriptEngine->RegisterObjectProperty("Info","const int y",asOFFSET(Info,y));
 	ScriptEngine->RegisterObjectProperty("Info","const int z",asOFFSET(Info,z));
-	ScriptEngine->RegisterObjectProperty("Info","const int x_real",asOFFSET(Info,x_real));
-	ScriptEngine->RegisterObjectProperty("Info","const int y_real",asOFFSET(Info,y_real));
-	ScriptEngine->RegisterObjectProperty("Info","const int z_real",asOFFSET(Info,z_real));
+	ScriptEngine->RegisterObjectProperty("Info","const double x_real",asOFFSET(Info,x_real));
+	ScriptEngine->RegisterObjectProperty("Info","const double y_real",asOFFSET(Info,y_real));
+	ScriptEngine->RegisterObjectProperty("Info","const double z_real",asOFFSET(Info,z_real));
 	ScriptEngine->RegisterObjectProperty("Info","const bool facing",asOFFSET(Info,facing));
 	ScriptEngine->RegisterObjectProperty("Info","const bool holding_up",asOFFSET(Info,holding_up));
 	ScriptEngine->RegisterObjectProperty("Info","const bool holding_down",asOFFSET(Info,holding_down));
