@@ -949,8 +949,8 @@ void RegisterScriptFunctions(){
 	ScriptEngine->RegisterObjectBehaviour("Info",asBEHAVE_ADDREF,"void f()",asMETHOD(Info,AddRef),asCALL_THISCALL);
 	ScriptEngine->RegisterObjectBehaviour("Info",asBEHAVE_RELEASE,"void f()",asMETHOD(Info,RelRef),asCALL_THISCALL);
 	ScriptEngine->RegisterObjectBehaviour("Info",asBEHAVE_FACTORY,"Info @f()",asFUNCTIONPR(Info_Factory,(),Info*),asCALL_CDECL);
-	ScriptEngine->RegisterObjectBehaviour("Info",asBEHAVE_FACTORY,"Info @f()",asFUNCTIONPR(Info_Factory,(int object_num),Info*),asCALL_CDECL);
-	ScriptEngine->RegisterObjectBehaviour("Info",asBEHAVE_FACTORY,"Info @f()",asFUNCTIONPR(Info_Factory,(const Info &info),Info*),asCALL_CDECL);
+	ScriptEngine->RegisterObjectBehaviour("Info",asBEHAVE_FACTORY,"Info @f(int)",asFUNCTIONPR(Info_Factory,(int object_num),Info*),asCALL_CDECL);
+	ScriptEngine->RegisterObjectBehaviour("Info",asBEHAVE_FACTORY,"Info @f(const Info &in info)",asFUNCTIONPR(Info_Factory,(const Info &info),Info*),asCALL_CDECL);
 
 	ScriptEngine->RegisterObjectMethod("Info","int opAssign(int object_num)",asMETHODPR(Info,operator=,(int object_num),int),asCALL_THISCALL);
 	ScriptEngine->RegisterObjectMethod("Info","int opAssign(const Info &in info)",asMETHODPR(Info,operator=,(const Info &info),int),asCALL_THISCALL);
