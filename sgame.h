@@ -295,7 +295,7 @@ typedef struct {
     int act;
     int unkwn2;
     double ratio;
-    int role;
+    int role; // 0 = normal, 1 = soldier, 2 = boss
     int unkwn3;
 } sSpawn;
 
