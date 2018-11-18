@@ -52,4 +52,22 @@ void RegisterGameEnums(asIScriptEngine *ScriptEngine){
 	ScriptEngine->RegisterEnumValue("ObjectStates","STATE_LOUIS_MESSAGE",9997);
 	ScriptEngine->RegisterEnumValue("ObjectStates","STATE_LOUIS_DELETE",9998);
 	ScriptEngine->RegisterEnumValue("ObjectStates","STATE_LOUIS_BROKEN_WEAPON",9999);
+
+	ScriptEngine->RegisterEnum("ItrKinds");
+
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_NORMAL", 0);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_CATCH_DOP", 1);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_PICK_WEAPON", 2);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_CATCH", 3);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_THROWN", 4);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_WEAPON", 5);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_FINISH_HIM", 6);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_ROWING_PICK", 7);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_HEAL", 8);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_SHIELD", 9);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_FLUTE", 10);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_FLUTE_2", 11);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_OBSTACLE", 14);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_WHIRLWIND_LIFT", 15);
+	ScriptEngine->RegisterEnumValue("ItrKinds", "KIND_WHIRLWIND_FREEZE", 16);
 }

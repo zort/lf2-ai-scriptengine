@@ -59,6 +59,24 @@ typedef enum {
 	STATE_LOUIS_BROKEN_WEAPON = 9999
 } ObjectStates;
 
+typedef enum {
+    KIND_NORMAL = 0,
+	KIND_CATCH_DOP = 1,
+	KIND_PICK_WEAPON = 2,
+	KIND_CATCH = 3,
+	KIND_THROWN = 4,
+	KIND_WEAPON = 5,
+	KIND_FINISH_HIM = 6,
+	KIND_ROWING_PICK = 7,
+    KIND_HEAL = 8,
+	KIND_SHIELD = 9,
+	KIND_FLUTE = 10,
+	KIND_FLUTE_2 = 11,
+	KIND_OBSTACLE = 14,
+	KIND_WHIRLWIND_LIFT = 15,
+	KIND_WHIRLWIND_FREEZE = 16,
+} ItrKinds;
+
 void RegisterGameEnums(asIScriptEngine *ScriptEngine);
 
 #endif // _GAMEENUMS_H_
