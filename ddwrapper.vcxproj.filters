@@ -44,6 +44,9 @@
     <ClCompile Include="gameenums.cpp">
       <Filter>sources</Filter>
     </ClCompile>
+    <ClCompile Include="add_on\scriptmath3d\scriptmath3d.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ddwrapper.h">
@@ -80,6 +83,9 @@
       <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="gameenums.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="add_on\scriptmath3d\scriptmath3d.h">
       <Filter>headers</Filter>
     </ClInclude>
   </ItemGroup>

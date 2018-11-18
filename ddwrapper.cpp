@@ -41,6 +41,7 @@
 
 #include "add_on\scriptmath\scriptmath.h"
 #include "add_on\scriptmath\scriptmathcomplex.h"
+#include "add_on\scriptmath3d\scriptmath3d.h"
 #include "add_on\scriptarray\scriptarray.h"
 #include "add_on\scriptbuilder\scriptbuilder.h"
 #include "add_on\scriptstdstring\scriptstdstring.h"
@@ -872,6 +873,7 @@ void __stdcall AIa( int object_num,int unkwn1)
 void RegisterScriptFunctions(){
 	RegisterScriptMath(ScriptEngine);
 	RegisterScriptMathComplex(ScriptEngine);
+	RegisterScriptMath3D(ScriptEngine);
 	RegisterStdString(ScriptEngine);
 	RegisterScriptArray(ScriptEngine,true);
 	RegisterStdStringUtils(ScriptEngine);
