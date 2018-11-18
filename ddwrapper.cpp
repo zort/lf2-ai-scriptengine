@@ -120,7 +120,8 @@ class Info {
 		int num;
 		int ctimer;
 		int arest;
-		int vrest;
+		char vrests[400];
+		int vrest; //backwards compatibility
 		double x_velocity;
 		double y_velocity;
 		double z_velocity;
@@ -207,6 +208,7 @@ class Info {
 			num = object_num;
 			ctimer = game->objects[object_num]->ctimer;
 			arest = game->objects[object_num]->arest;
+			memcpy(vrests, game->objects[object_num]->vrests, 400);
 			vrest = (int)(*(char*)(*(int*)(0x458c94+object_num*4)+0xF0));
 			if(vrest < (int)(*(char*)(*(int*)(0x458c94+object_num*4)+0xF3)))
 				vrest = (int)(*(char*)(*(int*)(0x458c94+object_num*4)+0xF3));
@@ -1026,6 +1028,7 @@ void RegisterScriptFunctions(){
 	ScriptEngine->RegisterObjectProperty("Info","int num",asOFFSET(Info,num));
 	ScriptEngine->RegisterObjectProperty("Info","int ctimer",asOFFSET(Info,ctimer));
 	ScriptEngine->RegisterObjectProperty("Info","int arest",asOFFSET(Info,arest));
+	ScriptEngine->RegisterObjectProperty("Info","CharArray vrests",asOFFSET(Info,vrests));
 	ScriptEngine->RegisterObjectProperty("Info","int vrest",asOFFSET(Info,vrest));
 	ScriptEngine->RegisterObjectProperty("Info","double x_velocity",asOFFSET(Info,x_velocity));
 	ScriptEngine->RegisterObjectProperty("Info","double y_velocity",asOFFSET(Info,y_velocity));
