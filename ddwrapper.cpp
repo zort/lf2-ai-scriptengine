@@ -312,6 +312,13 @@ int loadTarget(int target_num)
 	return target = target_num;
 }
 
+int setEnemy(int object_num)
+{
+	if (object_num < 0 || object_num >= 400 || !game->exists[object_num]) return -1;
+
+	return game->objects[self.num]->enemy = object_num;
+}
+
 void up(char key, char holding)
 {
 	game->objects[self.num]->up = key;
@@ -887,6 +894,7 @@ void RegisterScriptFunctions(){
 	ScriptEngine->RegisterGlobalFunction("void print(const string &in p)",asFUNCTIONPR(print,(const std::string &p),void),asCALL_CDECL);
 
 	ScriptEngine->RegisterGlobalFunction("int loadTarget(int object_num)",asFUNCTION(loadTarget),asCALL_CDECL);
+	ScriptEngine->RegisterGlobalFunction("int setEnemy(int object_num)",asFUNCTION(setEnemy),asCALL_CDECL);
 
 	ScriptEngine->RegisterGlobalFunction("void up(int8 key = 1,int8 holding = 0)",asFUNCTION(up),asCALL_CDECL);
 	ScriptEngine->RegisterGlobalFunction("void up(bool key,int8 holding = 0)",asFUNCTION(up),asCALL_CDECL);
