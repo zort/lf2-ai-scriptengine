@@ -322,8 +322,10 @@ void RegisterGameArrays(asIScriptEngine *ScriptEngine){
 	ScriptEngine->RegisterObjectProperty("Object","const int8 DJA",asOFFSET(sObject,DJA));
 	ScriptEngine->RegisterObjectProperty("Object","const CharArray unkwn7",asOFFSET(sObject,unkwn7));
 	ScriptEngine->RegisterObjectProperty("Object","const int arest",asOFFSET(sObject,arest));
-	ScriptEngine->RegisterObjectProperty("Object","const int vrest",asOFFSET(sObject,vrest));
-	ScriptEngine->RegisterObjectProperty("Object","const CharArray unkwn8",asOFFSET(sObject,unkwn8));
+	ScriptEngine->RegisterObjectProperty("Object","const CharArray vrests",asOFFSET(sObject,vrests));
+	// backwards compatibility for when vrests was called vrest + unkwn8
+	ScriptEngine->RegisterObjectProperty("Object","const int vrest",asOFFSET(sObject,vrests));
+	ScriptEngine->RegisterObjectProperty("Object","const CharArray unkwn8",asOFFSET(sObject, vrests) + sizeof(int));
 	ScriptEngine->RegisterObjectProperty("Object","const int attacked_object_num",asOFFSET(sObject,attacked_object_num));
 	ScriptEngine->RegisterObjectProperty("Object","const CharArray unkwn9",asOFFSET(sObject,unkwn9));
 	ScriptEngine->RegisterObjectProperty("Object","const int clone",asOFFSET(sObject,clone));

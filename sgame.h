@@ -251,9 +251,9 @@ typedef struct {
     char DJA;
     char unkwn7[15];
     int arest;
-    int vrest;
-    char unkwn8[396];
+    char vrests[400];
     int attacked_object_num;
+    // skip unkwn8 for backwards compatibility reasons
     char unkwn9[112];
     int clone;
     int weapon_thrower;
