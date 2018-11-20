@@ -213,10 +213,11 @@ typedef struct {
 	int frame3;
 	int frame4;
 	char facing;
-	char unkwn3[11];
+	char unkwn3[7];
 	int wait_counter;
 	int ccatcher;
 	int ctimer;
+	int unkwn3a;
 	int weapon_type;
 	int weapon_held;
 	int weapon_holder;
