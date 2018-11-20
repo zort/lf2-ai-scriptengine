@@ -115,6 +115,7 @@ class Info {
 		int state;
 		int weapon_type;
 		int weapon_held;
+		int weapon_holder;
 		int shake;
 		int wait_counter;
 		int num;
@@ -203,6 +204,7 @@ class Info {
 			}else{
 				weapon_held = game->objects[object_num]->weapon_held;
 			}
+			weapon_holder = game->objects[object_num]->weapon_holder;
 			shake = game->objects[object_num]->shake;
 			wait_counter = game->objects[object_num]->wait_counter;
 			num = object_num;
@@ -1023,6 +1025,7 @@ void RegisterScriptFunctions(){
 	ScriptEngine->RegisterObjectProperty("Info","int state",asOFFSET(Info,state));
 	ScriptEngine->RegisterObjectProperty("Info","int weapon_type",asOFFSET(Info,weapon_type));
 	ScriptEngine->RegisterObjectProperty("Info","int weapon_held",asOFFSET(Info,weapon_held));
+	ScriptEngine->RegisterObjectProperty("Info","int weapon_holder",asOFFSET(Info,weapon_holder));
 	ScriptEngine->RegisterObjectProperty("Info","int shake",asOFFSET(Info,shake));
 	ScriptEngine->RegisterObjectProperty("Info","int wait_counter",asOFFSET(Info,wait_counter));
 	ScriptEngine->RegisterObjectProperty("Info","int num",asOFFSET(Info,num));
