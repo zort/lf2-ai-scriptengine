@@ -60,7 +60,7 @@ typedef struct {
 	int fall;
 	int arest;
 	int vrest;
-	int unkwn1;
+	int unkwn1; // named "respond" by xsoameix
 	int effect;
 	int catchingact1;
 	int catchingact2;
