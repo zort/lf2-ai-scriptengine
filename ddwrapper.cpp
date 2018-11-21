@@ -75,6 +75,7 @@ class Info {
 		int x;
 		int y;
 		int z;
+		Vector3 position;
 		double x_real;
 		double y_real;
 		double z_real;
@@ -123,6 +124,7 @@ class Info {
 		int arest;
 		char vrests[400];
 		int vrest; //backwards compatibility
+		Vector3 velocity;
 		double x_velocity;
 		double y_velocity;
 		double z_velocity;
@@ -163,6 +165,7 @@ class Info {
 			x_real = game->objects[object_num]->x_real;
 			y_real = game->objects[object_num]->y_real;
 			z_real = game->objects[object_num]->z_real;
+			position = Vector3(x_real, y_real, z_real);
 			facing = game->objects[object_num]->facing;
 			holding_up = game->objects[object_num]->holding_up;
 			holding_down = game->objects[object_num]->holding_down;
@@ -217,6 +220,7 @@ class Info {
 			x_velocity = game->objects[object_num]->x_velocity;
 			y_velocity = game->objects[object_num]->y_velocity;
 			z_velocity = game->objects[object_num]->z_velocity;
+			velocity = Vector3(x_velocity, y_velocity, z_velocity);
 			clone = game->objects[object_num]->clone;
 			type = game->objects[object_num]->data->type;
 			reserve = game->objects[object_num]->reserve;
@@ -985,6 +989,7 @@ void RegisterScriptFunctions(){
 	ScriptEngine->RegisterObjectProperty("Info","int x",asOFFSET(Info,x));
 	ScriptEngine->RegisterObjectProperty("Info","int y",asOFFSET(Info,y));
 	ScriptEngine->RegisterObjectProperty("Info","int z",asOFFSET(Info,z));
+	ScriptEngine->RegisterObjectProperty("Info","vector3 position",asOFFSET(Info,position));
 	ScriptEngine->RegisterObjectProperty("Info","double x_real",asOFFSET(Info,x_real));
 	ScriptEngine->RegisterObjectProperty("Info","double y_real",asOFFSET(Info,y_real));
 	ScriptEngine->RegisterObjectProperty("Info","double z_real",asOFFSET(Info,z_real));
@@ -1033,6 +1038,7 @@ void RegisterScriptFunctions(){
 	ScriptEngine->RegisterObjectProperty("Info","int arest",asOFFSET(Info,arest));
 	ScriptEngine->RegisterObjectProperty("Info","CharArray vrests",asOFFSET(Info,vrests));
 	ScriptEngine->RegisterObjectProperty("Info","int vrest",asOFFSET(Info,vrest));
+	ScriptEngine->RegisterObjectProperty("Info","vector3 velocity",asOFFSET(Info,velocity));
 	ScriptEngine->RegisterObjectProperty("Info","double x_velocity",asOFFSET(Info,x_velocity));
 	ScriptEngine->RegisterObjectProperty("Info","double y_velocity",asOFFSET(Info,y_velocity));
 	ScriptEngine->RegisterObjectProperty("Info","double z_velocity",asOFFSET(Info,z_velocity));
